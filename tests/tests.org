@@ -1,7 +1,7 @@
 * Upload File
   #+BEGIN_SRC restclient
-POST https://i.ell.dev/upload
-Content-Type: application/x-binary
+POST http://127.0.0.1:8787/upload
+Content-Type: video/webm
 
 < test.webm
   #+END_SRC
@@ -9,18 +9,10 @@ Content-Type: application/x-binary
   #+RESULTS:
   #+BEGIN_SRC text
   uploader inc
-  POST https://i.ell.dev/upload
-  HTTP/1.1 404 Not Found
-  Date: Fri, 30 Apr 2021 21:34:32 GMT
-  Content-Type: text/plain;charset=UTF-8
-  Content-Length: 12
-  Connection: keep-alive
-  cf-request-id: 09c64d7cda000054e797061000000001
-  Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-  Report-To: {"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Aj%2B1dhePHHlF3hSW7x9QNAXBBHjaYGBG1eN9En1UrS3mfFxMg%2Bi3ZJaXjd1z%2BDMVW%2FMpKa6oUmWwLaJsTQJKdIyrlHljQ8D5%2Fg4%3D"}],"max_age":604800}
-  NEL: {"max_age":604800,"report_to":"cf-nel"}
-  Server: cloudflare
-  CF-RAY: 6483e50e2ed354e7-LAX
-  alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
-  Request duration: 0.269757s
+  POST http://127.0.0.1:8787/upload
+  HTTP/1.1 200 OK
+  content-length: 12
+  content-type: text/plain;charset=UTF-8
+  date: Sat, 01 May 2021 21:59:50 GMT
+  Request duration: 0.270199s
   #+END_SRC
